@@ -2,53 +2,77 @@ Aarakocra:
     Witty  : Something about being BS
     Dex    : 2
     Wis    : 1
-    Traits : Flight,Talons
+    Traits : 
+        - Flight
+        - Talons
 
 
 Aasimar:
     Witty  : I always say this wrong
     Cha    : 2
-    Traits : Darkvision,Celestial
+    Traits : 
+        - Darkvision
+        - Celestial
 
     
 Bugbear:
     Witty  : More like HUGbear amirite!
     Str    : 2
     Dex    : 1
-    Traits : Darkvision,Long-Limbed,Powerful Build,Sneaky,Surprise Attack
+    Traits : 
+        - Darkvision
+        - Long-Limbed
+        - Powerful Build
+        - Sneaky
+        - Surprise Attack
 
     
 Dragonborn:
     Witty  : One of many edgelord races
     Str    : 2
     Cha    : 1
-    Traits : Draconic Ancestry,Breath Weapon,Damage Resistance
+    Traits : 
+        - Draconic Ancestry
+        - Breath Weapon
+        - Damage Resistance
 
     
 Dwarf:
     Witty  : Staples
     Con    : 2
-    Traits : Darkvision,Dwarven Resilience,Dwarven Combat Training,Stonecunning
+    Traits : 
+        - Darkvision
+        - Dwarven Resilience
+        - Dwarven Combat Training
+        - Stonecunning
     
     
 Elf:
     Witty  : Even more Staples
     Dex    : 2
-    Traits : Darkvision,Keen Senses,Fey Ancestry,Trance
+    Traits : 
+        - Darkvision
+        - Keen Senses
+        - Fey Ancestry
+        - Trance
 
     
 Feral Tiefling:
     Witty  : Why is there Feral at the front
     Dex    : 2
     Int    : 1
-    Traits : Darkvision,Hellish Resistance,Infernal
+    Traits : 
+        - Darkvision
+        - Hellish Resistance
+        - Infernal
     
     
 Firbolg:
     Witty  : I dont know what this is...
     Str    : 2
     Dex    : 1
-    Traits : Firbolg
+    Traits : 
+        - Firbolg
 
     
 Genasi:
@@ -59,164 +83,176 @@ Genasi:
 Gnome:
     Witty  : Gnomeo oh Gnomeo where art thou my Gnomeo
     Int    : 2
-    Traits : Darkvision,Gnome Cunning
+    Traits : 
+        - Darkvision
+        - Gnome Cunning
 
     
 Goblin:
     Witty  : This is an enemy not a race
-    Laws.user_stats['Dex'] += 2
-    Laws.user_stats['Con'] += 1
-    Laws.user_other_traits.append('Darkvision')
-    Laws.user_other_traits.append('Fury of the Small')
-    Laws.user_other_traits.append('Nimble Escape')
+    Dex    : 2
+    Con    : 1
+    Traits : 
+        - Darkvision
+        - Fury of the Small
+        - Nimble Escape
+    
+Goliath:
+    Witty  : Large individual
+    Str    : 2
+    Con    : 1
+    Traits : 
+        - Natural Athlete
+        - Stones Endurance
+        - Powerful Build
+        - Mountain Born
 
     
-if Laws.user_race == 'Goliath':
-    print('Large individual')
-    Laws.user_stats['Str'] += 2
-    Laws.user_stats['Con'] += 1
-    Laws.user_other_traits.append('Natural Athlete')
-    Laws.user_other_traits.append('Stone\'s Endurance')
-    Laws.user_other_traits.append('Powerful Build')
-    Laws.user_other_traits.append('Mountain Born')
+Half-Elf:
+    Witty : Half-this, half-that, whole lot of uselessness
+    Cha    : 2
+    Traits : 
+        - Darkvision
+        - Fey Ancestry
+        - Skill Versatility
 
     
-if Laws.user_race == 'Half-Elf':
-    print('Half-this, half-that, whole lot of uselessness')
-    Laws.user_stats['Cha'] += 2
-    Laws.user_other_traits.append('Darkvision')
-    Laws.user_other_traits.append('Fey Ancestry')
-    Laws.user_other_traits.append('Skill Versatility')
+Halfling:
+    Witty : Half-a-thing!
+    Dex    : 2
+    Traits : 
+        - Lucky
+        - Brave
+        - Halfling Nimbleness
 
     
-if Laws.user_race == 'Halfling':
-    print('Half-a-thing!')
-    Laws.user_stats['Dex'] += 2
-    Laws.user_other_traits.append('Lucky')
-    Laws.user_other_traits.append('Brave')
-    Laws.user_other_traits.append('Halfling Nimbleness')
+Half-Orc:
+    Witty : Half the practicality, twice the angst
+    Str    : 2
+    Con    : 1
+    Traits : 
+        - Darkvision
+        - Menacing
+        - Relentless
+        - Endurance
+        - Savage Attack
 
     
-if Laws.user_race == 'Half-Orc':
-    print('Half the practicality, twice the angst')
-    Laws.user_stats['Str'] += 2
-    Laws.user_stats['Con'] += 1
-    Laws.user_other_traits.append('Darkvision')
-    Laws.user_other_traits.append('Menacing')
-    Laws.user_other_traits.append('Relentless')
-    Laws.user_other_traits.append('Endurance')
-    Laws.user_other_traits.append('Savage Attack')
+Hobgoblin:
+    Witty : Somehow better than Goblins
+    Con    : 2
+    Int    : 1
+    Traits : 
+        - Darkvision
+        - Martial Training
+        - Saving Face
 
     
-if Laws.user_race == 'Hobgoblin':
-    print('Somehow better than Goblins')
-    Laws.user_stats['Con'] += 2
-    Laws.user_stats['Int'] += 1
-    Laws.user_other_traits.append('Darkvision')
-    Laws.user_other_traits.append('Martial Training')
-    Laws.user_other_traits.append('Saving Face')
+Human:
+    Witty : Also BS because science
+    Str    : 1
+    Dex    : 1
+    Traits :
+        - Extra Language
 
     
-if Laws.user_race == 'Human':
-    print('Also BS because science')
-    Laws.user_stats['Str'] += 1
-    Laws.user_stats['Dex'] += 1
-    Laws.user_other_traits.append('Extra Language')
+Kenku:
+    Witty : Like edgy but with more(?) RP
+    Dex    : 2
+    Wis    : 1
+    Traits :
+        - Expert Forgery
+        - Kenku Training
+        - Mimicry
 
     
-if Laws.user_race == 'Kenku':
-    print('Like edgy but with more(?) RP')
-    Laws.user_stats['Dex'] += 2
-    Laws.user_stats['Wis'] += 1
-    Laws.user_other_traits.append('Expert Forgery')
-    Laws.user_other_traits.append('Kenku Training')
-    Laws.user_other_traits.append('Mimicry')
+Kobald:
+    Witty : Not what people think they are
+    Str    : 2
+    Dex    : 2
+    Traits : 
+        - Darkvision
+        - Grovel, Cower and Beg
+        - Pack Tactics
+        - Sunlight Sensitivity
 
     
-if Laws.user_race == 'Kobald':
-    print('Not what people think they are')
-    Laws.user_stats['Str'] -= 2
-    Laws.user_stats['Dex'] += 2
-    Laws.user_other_traits.append('Darkvision')
-    Laws.user_other_traits.append('Grovel, Cower, and Beg')
-    Laws.user_other_traits.append('Pack Tactics')
-    Laws.user_other_traits.append('Sunlight Sensitivity')
+Lizardfolk:
+    Witty : Im running out of creativity
+    Con    : 2
+    Wis    : 1
+    Traits : 
+        - Bite
+        - Cunning Artisanm
+        - Hold Breat
+        - Huntes Lore
+        - Natural Armour
 
     
-if Laws.user_race == 'Lizardfolk':
-    print('I\'m running out of creativity')
-    Laws.user_stats['Con'] += 2
-    Laws.user_stats['Wis'] += 1
-    Laws.user_other_traits.append('Bite')
-    Laws.user_other_traits.append('Cunning Artisan')
-    Laws.user_other_traits.append('Hold Breath')
-    Laws.user_other_traits.append('Hunte\'s Lore')
-    Laws.user_other_traits.append('Natural Armour')
-
-    
-if Laws.user_race == 'Orc':
-    print('AngstAngstAngstRageAngst')
-    Laws.user_stats['Str'] += 2
-    Laws.user_stats['Con'] += 1
-    Laws.user_stats['Int'] -= 2
-    Laws.user_other_traits.append('Darkvision')
-    Laws.user_other_traits.append('Aggressive')
-    Laws.user_other_traits.append('Menacing')
-    Laws.user_other_traits.append('Powerful Build')
+Orc:
+    Witty : AngstAngstAngstRageAngst
+    Str    : 2
+    Con    : 1
+    Int    : 2
+    Traits : 
+        - Darkvision
+        - Aggressive
+        - Menacing
+        - Powerful Build
     
 
     
-if Laws.user_race == 'Tabaxi':
-    print('Literally a race from Skyrim')
-    Laws.user_stats['Dex'] += 2
-    Laws.user_stats['Cha'] += 1
-    Laws.user_other_traits.append('Darkvision')
-    Laws.user_other_traits.append('Feline Agility')
-    Laws.user_other_traits.append('Cat\'s Claws')
-    Laws.user_other_traits.append('Cat\'s Talent')
+Tabaxi:
+    Witty : Literally a race from Skyrim
+    Dex    : 2
+    Cha    : 1
+    Traits : 
+        - Darkvision
+        - Feline Agility
+        - Cats Claws
+        - Cats Talent
 
     
-if Laws.user_race == 'Tiefling':
-    print('I had this already?')
-    Laws.user_stats['Cha'] += 2
-    Laws.user_stats['Int'] += 1
-    Laws.user_other_traits.append('Darkvision')
-    Laws.user_other_traits.append('Hellish Resistance')
-    Laws.user_other_traits.append('Infernal Legacy')
+Tiefling:
+    Witty : I had this already?
+    Cha    : 2
+    Int    : 1
+    Traits : 
+        - Darkvision
+        - Hellish Resistance
+        - Infernal Legacy
 
     
-if Laws.user_race == 'Tortle':
-    print('What\'t not to love!')
-    Laws.user_stats['Str'] += 2
-    Laws.user_stats['Wis'] += 1
-    Laws.user_other_traits.append('Claws')
-    Laws.user_other_traits.append('Hold Breath')
-    Laws.user_other_traits.append('Natural Armour')
-    Laws.user_other_traits.append('Shell Defense')
-    Laws.user_other_traits.append('Survival Instinct')
+Tortle:
+    Witty : Whats not to love!
+    Str    : 2
+    Wis    : 1
+    Traits : 
+        - Claws
+        - Hold Breath
+        - Natural Armour
+        - Shell Defense
+        - Survival Instinct
 
     
-if Laws.user_race == 'Triton':
-    print('Fish people?')
-    Laws.user_stats['Str'] += 1
-    Laws.user_stats['Con'] += 1
-    Laws.user_stats['Cha'] += 1
-    Laws.user_other_traits.append('Amphibious')
-    Laws.user_other_traits.append('Control Air and Water')
-    Laws.user_other_traits.append('Emissary of the Sea')
-    Laws.user_other_traits.append('Guardians of the Depths')
+Triton:
+    Witty : Fish people?
+    Str    : 1
+    Con    : 1
+    Cha    : 1
+    Traits : 
+        - Amphibious
+        - Control Air and Water
+        - Emissary of the Sea
+        - Guardians of the Depths
 
     
-if Laws.user_race == 'Yuan-ti Pureblood':
-    print('Snake people')
-    Laws.user_stats['Cha'] += 2
-    Laws.user_stats['Int'] += 1
-    Laws.user_other_traits.append('Darkvision')
-    Laws.user_other_traits.append('Innate Spellcasting')
-    Laws.user_other_traits.append('Magic Resistance')
-    Laws.user_other_traits.append('Poison Imminity')
-    
-
-#I have done it this way, mostly because I don't know any other way
-#and because this is suppposedly the correct way?
-#My god it was long though
+Yuan-ti Pureblood:
+    Witty : Snake people
+    Cha    : 2
+    Int    : 1
+    Traits : 
+        - Darkvision
+        - Innate Spellcasting
+        - Magic Resistance
+        - Poison Imminity

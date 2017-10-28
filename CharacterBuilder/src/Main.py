@@ -12,18 +12,7 @@
 #This is the main file
 #This is where it all connects to..
 
-import Laws
-#This is used to bring in the file from the get-go
-#meaning all the info will travel between them
-
-import RaceDesc
-import ClassDesc
-#Race info! Not Rascism and Class info! Not Classism..?
-#Also because import is silly I need to reimport on every run to ensure witty comments
-
-import imp
-#I need this to reimport RaceDesc and ClassDesc so it runs everytime it passes over them
-
+import yamlImport
 
 class mainProgram:
     """The main class to start this program of witty banter and muchos adventure
@@ -33,114 +22,128 @@ class mainProgram:
     """
     
     def __init__(self):
-        """Placeholder ready to setup some nice shiney objects!"""
-        pass
+        """Pull in the data ready to make an epic adventurer!"""
+        self.classes = yamlImport.yamlImport.importYAML("../cfg/Classes.yaml")
+        self.races   = yamlImport.yamlImport.importYAML("../cfg/Races.yaml")
+        self.law     = yamlImport.yamlImport.importYAML("../cfg/Laws.yaml")
     
-    def run(self):
-        """Where all the magic happens, or not depending on your race!"""
-        print('Begin \n')
-        #I was always bad at openings
-        
-        
-        # ---------------- Race Setup ----------------    
+    
+    def __listRaces(self):
+        """Prints all configured races"""
+        for key in self.races.keys():
+            print(key, sep='\n')
+
+    def __listRaceDetails(self,Race):
+        """Prints a races attributes"""
+        for key, value in self.races[Race].items():
+            print(key, value, sep=':')
+    
+    def __listClasses(self):
+        """Prints all configured classes"""
+        for key in self.classes.keys():
+            print(key, sep='\n')
+    
+    def __listClassDetails(self,Class):
+        """Prints a classes attributes"""
         print('')
+        for key, value in self.classes[Class].items():
+            print(key, value, sep=':')
+    
+    def raceSetup(self):
+        """Function allows a user to pick their race"""
         print('Let\'s start with a race. You can choose any from the following list:')
-        print(*Laws.race_list, sep='\n')
-            
+        
+        self.__listRaces()
+        
+        #This is the loop for picking a race
+        #A loop is used so that they can keep going back and forth
+        #This also lets me give descriptions on each pick
         while True:
-            #This is the loop for picking a race
-                
-            #A loop is used so that they can keep going back and forth
-            #This also lets me give descriptions on each pick
-                
-            Laws.user_race = input('\n Race: ').title()
-            #the \n gives me a new line, I just like the format
             
-            if Laws.user_race not in Laws.race_list:
+            #the \n gives me a new line, I just like the format
+            user_race = input('\n Race: ').title()
+            
+            #Safety net to ensure only available races are picked
+            if self.races.get(user_race, None) == None:
                 print('That isn\'t a race you can choose!')
                 continue
-            #Safety net to ensure only available races are picked
-            #also .titled() for simplicity
-                
-            print('')
-            imp.reload(RaceDesc)
-            #This means everytime we pass over this it re loads the module
-            print('')
+            
             #Calls the description of the race
-                
-            print('Is ', Laws.user_race, ' the race you want?')
+            print('\n',self.races[user_race]["Witty"],'\n')            
+            
             #I know what it's asking doens't mean the user does
-            user_response = input('Yes/No/List \n').title()
+            print('Is ', user_race, ' the race you want?')
+            
             #I couldn't decide how to explain what the options were so this seemed easiest.
-            if user_response == 'Yes':
-                print('')
-                break
+            user_response = input('Yes/No/List \n').title()
+            
             #This was very witty and slightly complex, then I encountered 2 different bugs
             #So now it just breaks if it's the race they want
-                
-            if user_response == 'No':
-                continue
-            #Obviously if they say no, they want to re-pick, I haven't made it loop into the
-            #main block because I don't want to fill the output with constant lists
-            #So "No" just lets them re-pick with a third option for re-veiwing the list
-        
-            if user_response == 'List':
-                print(*Laws.race_list, sep='\n')
-                continue
-            #This proved to be the easiest way to do this, so "List" just re-prints the list
-            #and then goes back to the beginning of the internal block.
-                
+            if user_response == 'Yes':
+                #Alas the race hath been chosen! Crack on!
+                print('')
+                return user_race
             
-            if user_response == 'List':
+            elif user_response == 'No':
+                #Obviously if they say no, they want to re-pick, I haven't made it loop into the
+                #main block because I don't want to fill the output with constant lists
+                #So "No" just lets them re-pick with a third option for re-veiwing the list
                 continue
-            #The list catch, if someone said "List" then it can bring them back around
-        
+            
+            elif user_response == 'List':
+                #This proved to be the easiest way to do this, so "List" just re-prints the list
+                #and then goes back to the beginning of the internal block.
+                self.__listRaces()
+                continue
+            
             else:
+                #Sassy bitch
                 print('I\'ll take that as a no')
                 continue
-            ##Sassy bitch
-               
             
-        # ---------------- Class Setup ----------------
+    
+    def classSetup(self):
+        """Function allows a user to pick their class"""
         print('\n With a race chosen, now you need a class! \n')
-        print(*Laws.class_list, sep='\n')
         
-        #This will be another while loop
-        #infact this will be pretty indentical but with classes instead of races
+        self.__listClasses()
+        
         while True:
-            Laws.user_class = input('\n Class: ').title()
-            if Laws.user_class not in Laws.class_list:
-                print('That isn\'t a class you can be!')
+            
+            user_class = input('\n Class: ').title()
+            
+            if self.classes.get(user_class, None) == None:
+                print('That isn\'t a class you can choose!')
                 continue
-        
-            print('')
-            imp.reload(ClassDesc)
-            print('')
-        
-            print('Is ', Laws.user_class, ' the class you want?')
-            #See above
-        
+
+            self.__listClassDetails(user_class)            
+            
+            print('\n', 'Is ', user_class, ' the class you want?')
+            
             user_response = input('Yes/No/List \n').title()
-            #Copied and pasted so everything going forward is the same
             
             if user_response == 'Yes':
-                break
-                
-            if user_response == 'No':
+                return user_class
+            
+            elif user_response == 'No':
                 continue
-        
-            if user_response == 'List':
-                print(*Laws.class_list, sep='\n')
+            
+            elif user_response == 'List':
+                self.__listClasses()
                 continue
-                
-            if user_response == 'List':
-                continue
-        
+            
             else:
+                #Still a sassy bitch
                 print('I\'ll take that as a no')
                 continue
-            ##Still a sassy bitch
     
+    def run(self):
+        """Main run method"""
+        #I was always bad at openings
+        print('Begin \n')
+        myRace  = self.raceSetup()
+        myClass = self.classSetup()
+        print('Youve chosen: ', myRace,myClass)
     
 def main():
     run = mainProgram()                     #Initialise the main program

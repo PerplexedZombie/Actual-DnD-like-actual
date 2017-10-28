@@ -1,0 +1,74 @@
+# Classes avaliable in this wonderfully epic character builder
+# To add a custom class, simply add to the bottom of this file following
+#   the same format as below.
+
+Barbarian:
+    Hit Die: d12
+    Proficiencies: none
+    Saving throws: none
+
+
+Bard:
+    Hit Die: d8
+    Proficiencies: none
+    Saving throws: none
+    
+    
+Cleric:
+    Hit Die: d8
+    Proficiencies: none
+    Saving throws: none
+    
+    
+Druid:
+    Hit Die: d8
+    Proficiencies: none
+    Saving throws: none
+    
+    
+Fighter:
+    Hit Die: d10
+    Proficiencies: none
+    Saving throws: none
+    
+    
+Monk:
+    Hit Die: d8
+    Proficiencies: none
+    Saving throws: none
+    
+    
+Paladin:
+    Hit Die: d10
+    Proficiencies: none
+    Saving throws: none
+    
+    
+Ranger:
+    Hit Die: d10
+    Proficiencies: none
+    Saving throws: none
+    
+    
+Rogue:
+    Hit Die: d8
+    Proficiencies: none
+    Saving throws: none
+    
+    
+Sorcerer:
+    Hit Die: d6
+    Proficiencies: none
+    Saving throws: none
+    
+
+Warlock:
+    Hit Die: d8
+    Proficiencies: none
+    Saving throws: none
+    
+
+Wizard:
+    Hit Die: d8
+    Proficiencies: none
+    Saving throws: none

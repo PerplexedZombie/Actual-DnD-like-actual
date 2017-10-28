@@ -1,0 +1,37 @@
+# This is the settings config file
+# I've named it Laws because apparently 'Settings' is taken
+# Who names their files 'Settings' anyway
+# Note all atributes are initially set to zero
+
+#Users selected race
+user_race: Not Assigned
+
+# Users selected class
+user_class: Not Assigned
+
+user_stats:
+    Str : 0
+    Dex : 0
+    Con : 0
+    Int : 0
+    Wis : 0
+    Cha : 0
+
+#User's final HP at level 1
+user_HP: 0
+
+#User's AC assuming no Armour.. maybe?
+user_AC: 0
+
+#User's Speed, quite straight forward
+user_spd: 0
+
+#I haven't abbreviated initiative because I haven't
+user_initiative: 0
+
+#The user's Hit dice
+user_hit_die: 0
+
+#Other racial/class traits to be listed
+user_other_traits:
+    - none
