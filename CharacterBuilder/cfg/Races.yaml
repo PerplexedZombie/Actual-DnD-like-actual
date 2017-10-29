@@ -1,0 +1,258 @@
+Aarakocra:
+    Witty  : Something about being BS
+    Dex    : 2
+    Wis    : 1
+    Traits : 
+        - Flight
+        - Talons
+
+
+Aasimar:
+    Witty  : I always say this wrong
+    Cha    : 2
+    Traits : 
+        - Darkvision
+        - Celestial
+
+    
+Bugbear:
+    Witty  : More like HUGbear amirite!
+    Str    : 2
+    Dex    : 1
+    Traits : 
+        - Darkvision
+        - Long-Limbed
+        - Powerful Build
+        - Sneaky
+        - Surprise Attack
+
+    
+Dragonborn:
+    Witty  : One of many edgelord races
+    Str    : 2
+    Cha    : 1
+    Traits : 
+        - Draconic Ancestry
+        - Breath Weapon
+        - Damage Resistance
+
+    
+Dwarf:
+    Witty  : Staples
+    Con    : 2
+    Traits : 
+        - Darkvision
+        - Dwarven Resilience
+        - Dwarven Combat Training
+        - Stonecunning
+    
+    
+Elf:
+    Witty  : Even more Staples
+    Dex    : 2
+    Traits : 
+        - Darkvision
+        - Keen Senses
+        - Fey Ancestry
+        - Trance
+
+    
+Feral Tiefling:
+    Witty  : Why is there Feral at the front
+    Dex    : 2
+    Int    : 1
+    Traits : 
+        - Darkvision
+        - Hellish Resistance
+        - Infernal
+    
+    
+Firbolg:
+    Witty  : I dont know what this is...
+    Str    : 2
+    Dex    : 1
+    Traits : 
+        - Firbolg
+
+    
+Genasi:
+    Witty  : I say this one wrong too
+    Con    : 2
+    
+    
+Gnome:
+    Witty  : Gnomeo oh Gnomeo where art thou my Gnomeo
+    Int    : 2
+    Traits : 
+        - Darkvision
+        - Gnome Cunning
+
+    
+Goblin:
+    Witty  : This is an enemy not a race
+    Dex    : 2
+    Con    : 1
+    Traits : 
+        - Darkvision
+        - Fury of the Small
+        - Nimble Escape
+    
+Goliath:
+    Witty  : Large individual
+    Str    : 2
+    Con    : 1
+    Traits : 
+        - Natural Athlete
+        - Stones Endurance
+        - Powerful Build
+        - Mountain Born
+
+    
+Half-Elf:
+    Witty : Half-this, half-that, whole lot of uselessness
+    Cha    : 2
+    Traits : 
+        - Darkvision
+        - Fey Ancestry
+        - Skill Versatility
+
+    
+Halfling:
+    Witty : Half-a-thing!
+    Dex    : 2
+    Traits : 
+        - Lucky
+        - Brave
+        - Halfling Nimbleness
+
+    
+Half-Orc:
+    Witty : Half the practicality, twice the angst
+    Str    : 2
+    Con    : 1
+    Traits : 
+        - Darkvision
+        - Menacing
+        - Relentless
+        - Endurance
+        - Savage Attack
+
+    
+Hobgoblin:
+    Witty : Somehow better than Goblins
+    Con    : 2
+    Int    : 1
+    Traits : 
+        - Darkvision
+        - Martial Training
+        - Saving Face
+
+    
+Human:
+    Witty : Also BS because science
+    Str    : 1
+    Dex    : 1
+    Traits :
+        - Extra Language
+
+    
+Kenku:
+    Witty : Like edgy but with more(?) RP
+    Dex    : 2
+    Wis    : 1
+    Traits :
+        - Expert Forgery
+        - Kenku Training
+        - Mimicry
+
+    
+Kobald:
+    Witty : Not what people think they are
+    Str    : 2
+    Dex    : 2
+    Traits : 
+        - Darkvision
+        - Grovel, Cower and Beg
+        - Pack Tactics
+        - Sunlight Sensitivity
+
+    
+Lizardfolk:
+    Witty : Im running out of creativity
+    Con    : 2
+    Wis    : 1
+    Traits : 
+        - Bite
+        - Cunning Artisanm
+        - Hold Breat
+        - Huntes Lore
+        - Natural Armour
+
+    
+Orc:
+    Witty : AngstAngstAngstRageAngst
+    Str    : 2
+    Con    : 1
+    Int    : 2
+    Traits : 
+        - Darkvision
+        - Aggressive
+        - Menacing
+        - Powerful Build
+    
+
+    
+Tabaxi:
+    Witty : Literally a race from Skyrim
+    Dex    : 2
+    Cha    : 1
+    Traits : 
+        - Darkvision
+        - Feline Agility
+        - Cats Claws
+        - Cats Talent
+
+    
+Tiefling:
+    Witty : I had this already?
+    Cha    : 2
+    Int    : 1
+    Traits : 
+        - Darkvision
+        - Hellish Resistance
+        - Infernal Legacy
+
+    
+Tortle:
+    Witty : Whats not to love!
+    Str    : 2
+    Wis    : 1
+    Traits : 
+        - Claws
+        - Hold Breath
+        - Natural Armour
+        - Shell Defense
+        - Survival Instinct
+
+    
+Triton:
+    Witty : Fish people?
+    Str    : 1
+    Con    : 1
+    Cha    : 1
+    Traits : 
+        - Amphibious
+        - Control Air and Water
+        - Emissary of the Sea
+        - Guardians of the Depths
+
+    
+Yuan-ti Pureblood:
+    Witty : Snake people
+    Cha    : 2
+    Int    : 1
+    Traits : 
+        - Darkvision
+        - Innate Spellcasting
+        - Magic Resistance
+        - Poison Imminity
